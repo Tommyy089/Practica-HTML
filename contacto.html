@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- (Pega el mismo <header>) -->
+  <main>
+    <div class="container mt-4">
+      <h1 style="color:#d9534f; text-align:center;">Cotiza para tu Compañía</h1>
+      <form class="tarjeta" onsubmit="event.preventDefault(); enviarFormulario();">
+        <label for="nombre">Nombre y Cargo:</label>
+        <input type="text" id="nombre" name="nombre" class="form-control mb-2" required>
+        
+        <label for="motivo">Línea de interés:</label>
+        <select id="motivo" name="motivo" class="form-control mb-2">
+            <option value="epp">Equipos de Protección Personal (EPP)</option>
+            <option value="herramientas">Material Menor y Herramientas</option>
+            <option value="uniformes">Uniformes de Parada</option>
+        </select>
+        
+        <label for="mensaje">Detalla los requerimientos de tu Cuartel:</label>
+        <textarea id="mensaje" name="mensaje" class="form-control mb-2" rows="4"></textarea>
+        
+        <button type="submit" class="btn btn-danger mt-3">Enviar Cotización</button>
+      </form>
+    </div>
+  </main>
+  <footer class="text-center mt-5 p-3 bg-dark text-white"><p>Tienda Bomberil © 2026</p></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
