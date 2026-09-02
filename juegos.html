@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Todos los juegos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Efecto sutil al pasar el ratón por encima de los juegos */
+        .game-clean-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .game-clean-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Ajuste de color para los precios en gris como en la foto */
+        .text-muted-custom {
+            color: #9ca3af !important;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+
+  <!-- HEADER -->
+  <header class="sticky-top bg-black border-bottom border-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4 py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <i class="bi bi-controller fs-3 text-primary"></i>
+        <span>Nexus</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
+          <li class="nav-item"><a class="nav-link" href="index.html">Descubrir</a></li>
+          <li class="nav-item"><a class="nav-link active text-primary fw-bold" href="juegos.html">Juegos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="biblioteca.html">Biblioteca</a></li>
+          <li class="nav-item"><a class="nav-link" href="cuenta.html">Cuenta</a></li>
+        </ul>
+
+        <form class="d-flex me-3 position-relative flex-grow-1 flex-lg-grow-0 my-2 my-lg-0" role="search" id="searchForm">
+          <i class="bi bi-search search-icon position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary"></i>
+          <input class="form-control search-input ps-5 bg-secondary bg-opacity-25 text-light border-0" 
+                 type="search" id="searchInput" placeholder="Buscar en la tienda..." aria-label="Buscar">
+        </form>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="#" class="btn btn-outline-light btn-sm d-flex align-items-center gap-2 px-3 py-2" id="loginBtn">
+            <i class="bi bi-person-fill fs-6"></i>
+            <span>Iniciar Sesión</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN PRINCIPAL: TODOS LOS JUEGOS -->
+  <main class="container-fluid px-4 py-5">
+    
+    <!-- Título y Filtros (Idéntico a la foto) -->
+    <div class="mb-4">
+      <h1 class="fw-light mb-4" style="font-size: 2.5rem;">Todos los juegos</h1>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center text-muted-custom pb-3 border-bottom border-secondary border-opacity-25">
+        <span class="mb-2 mb-md-0">Mostrando 20 de resultados.</span>
+        <a href="#" class="text-decoration-none text-light d-flex align-items-center gap-2 fw-semibold">
+          <i class="bi bi-sort-down"></i> Ordenar y filtrar
+        </a>
+      </div>
+    </div>
+
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 g-4 pt-2">
+      
+      <!-- 1. FC 27 -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <!-- Tu imagen de FC27 -->
+            <img src="FC.avif" class="rounded-4 object-fit-cover w-100 h-100" alt="EA SPORTS FC 27">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">EA SPORTS FC™ 27</h6>
+          <div class="d-flex flex-column text-muted-custom small">
+            <span class="text-danger mb-1"><i class="bi bi-tag-fill"></i> Ahorra un 10 %</span>
+            <span>US$99.99</span>
+          </div>
+        </a>
+      </div> <!-- ¡Este div es vital para cerrar la columna! -->
+
+      <!-- 2. GTA VI -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <!-- Tu imagen de GTA -->
+            <img src="GrandTheftAuto6Banner.jpg" class="rounded-4 object-fit-cover w-100 h-100" alt="GTA VI">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Grand Theft Auto VI</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$99.99</span>
+          </div>
+        </a>
+      </div> <!-- ¡Este div es vital para cerrar la columna! -->
+
+      <!-- 3. Fortnite -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <!-- Tu imagen de Fortnite -->
+            <img src="unnamed.png" class="rounded-4 object-fit-cover w-100 h-100" alt="Fortnite">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Fortnite</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>Gratuito</span>
+          </div>
+        </a>
+      </div> <!-- ¡Este div es vital para cerrar la columna! -->
+      <!-- 4. eFootball -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+        <img src="./main_page_1_sp.png" class="rounded-4 object-fit-cover w-100 h-100" alt="eFootball">          </div>
+
+          <h6 class="mb-1 text-truncate fw-normal fs-6">eFootball™</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>Gratuito</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 5. Roblox -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/0f172a/ffffff?text=Roblox" class="rounded-4 object-fit-cover w-100 h-100" alt="Roblox">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Roblox</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>Gratuito</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 6. NBA 2K27 -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/0369a1/ffffff?text=NBA+2K27" class="rounded-4 object-fit-cover w-100 h-100" alt="NBA 2K27">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">NBA 2K27</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$69.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 7. Minecraft -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/166534/ffffff?text=Minecraft" class="rounded-4 object-fit-cover w-100 h-100" alt="Minecraft">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Minecraft</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$29.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 8. Wolverine -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/991b1b/ffffff?text=Wolverine" class="rounded-4 object-fit-cover w-100 h-100" alt="Wolverine">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Marvel's Wolverine</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$69.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 9. Call of Duty -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/374151/ffffff?text=Call+of+Duty" class="rounded-4 object-fit-cover w-100 h-100" alt="Call of Duty">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Call of Duty®</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$69.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 10. Cyber Odyssey -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/1a1a2e/ffffff?text=Cyber+Odyssey" class="rounded-4 object-fit-cover w-100 h-100" alt="Cyber Odyssey">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Cyber Odyssey 2077</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$49.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 11. Realm of Legends -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/b45309/ffffff?text=Realm+of+Legends" class="rounded-4 object-fit-cover w-100 h-100" alt="Realm of Legends">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Realm of Legends</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$19.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 12. Rocket League -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/0c4a6e/ffffff?text=Rocket+League" class="rounded-4 object-fit-cover w-100 h-100" alt="Rocket League">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Rocket League®</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>Gratuito</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 13. Speed Racers -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/7f1d1d/ffffff?text=Speed+Racers" class="rounded-4 object-fit-cover w-100 h-100" alt="Speed Racers">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Speed Racers</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$29.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 14. Neon Drifter -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/4c1d95/ffffff?text=Neon+Drifter" class="rounded-4 object-fit-cover w-100 h-100" alt="Neon Drifter">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Neon Drifter</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$15.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 15. Knights Tale -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/3f3f46/ffffff?text=Knights+Tale" class="rounded-4 object-fit-cover w-100 h-100" alt="Knights Tale">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Knight's Tale</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$24.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 16. The Sims 5 -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/14532d/ffffff?text=The+Sims+5" class="rounded-4 object-fit-cover w-100 h-100" alt="The Sims 5">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">The Sims 5</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>Gratuito</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 17. Galactic Pioneers -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/581c87/ffffff?text=Galactic" class="rounded-4 object-fit-cover w-100 h-100" alt="Galactic">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Galactic Pioneers</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span class="text-danger mb-1"><i class="bi bi-tag-fill"></i> Ahorra un 50 %</span>
+            <span>US$19.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 18. Shadow Ninja -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/1c1917/ffffff?text=Shadow+Ninja" class="rounded-4 object-fit-cover w-100 h-100" alt="Shadow Ninja">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Shadow Ninja</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$59.99</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 19. Valorant -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/dc2626/ffffff?text=Valorant" class="rounded-4 object-fit-cover w-100 h-100" alt="Valorant">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Valorant</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>Gratuito</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 20. Astro Miner -->
+      <div class="col">
+        <a href="#" class="text-decoration-none text-light game-clean-card d-block">
+          <div class="ratio ratio-1x1 mb-3">
+            <img src="https://via.placeholder.com/400x400/0f766e/ffffff?text=Astro+Miner" class="rounded-4 object-fit-cover w-100 h-100" alt="Astro Miner">
+          </div>
+          <h6 class="mb-1 text-truncate fw-normal fs-6">Astro Miner</h6>
+          <div class="d-flex flex-column text-muted-custom small mt-1">
+            <span>US$9.99</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-secondary py-4 mt-5 border-top border-dark">
+    <div class="container text-center text-md-start">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="m-0 fs-7">© 2026 GameZone Store. Todos los derechos reservados.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-secondary text-decoration-none hover-white"><i class="bi bi-twitter-x fs-5"></i></a>
+          <a href="#" class="text-secondary text-decoration-none hover-white"><i class="bi bi-discord fs-5"></i></a>
+          <a href="#" class="text-secondary text-decoration-none hover-white"><i class="bi bi-youtube fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lass="container text-center mt-4">
+      <h1 style="color:red;">Galería de Emergencias</h1>
+      <p>Registro fotográfico de nuestros ejercicios y academia.</p>
+      <img src="img/galeria1.jpg" alt="Ejercicio 1" class="img-fluid m-2" style="width: 300px;">
+      <img src="img/galeria2.jpg" alt="Ejercicio 2" class="img  -fluid m-2" style="width: 300px;">
+    </div>
+  </main>
+  <footer class="text-center p-3 bg-light"><p>Proyecto Bomberos - 2026</p></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
