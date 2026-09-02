@@ -1,20 +1,29 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('searchInput');
+  const gameItems = document.querySelectorAll('.game-item');
+  const loginBtn = document.getElementById('loginBtn');
 
-  if (form && status) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const nombre = document.getElementById('nombre')?.value.trim() || 'gamer';
+  // Filtro de búsqueda interactivo en tiempo real
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
 
-      status.textContent = 'Mensaje enviado correctamente, ' + nombre + '. Nuestro equipo te responderá pronto.';
-      status.classList.add('visible');
-      form.reset();
+    gameItems.forEach(item => {
+      const title = item.querySelector('.card-title').textContent.toLowerCase();
+      if (title.includes(query)) {
+        item.classList.remove('d-none');
+      } else {
+        item.classList.add('d-none');
+      }
     });
-  }
+  });
 
-  const yearNode = document.getElementById('year');
-  if (yearNode) {
-    yearNode.textContent = new Date().getFullYear();
-  }
+  // Simulación de Inicio de Sesión
+  loginBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const user = prompt('Ingrese su usuario para iniciar sesión:');
+    if (user) {
+      loginBtn.innerHTML = `<i class="bi bi-person-check-fill text-success"></i> <span>${user}</span>`;
+      loginBtn.classList.replace('btn-outline-light', 'btn-dark');
+    }
+  });
 });

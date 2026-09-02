@@ -1,37 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEXUS | Tienda de juegos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-  <header class="topbar"><nav class="nav-container">
-    <a href="index.html" class="brand"><span class="brand-mark">NX</span><span>NEXUS</span></a>
-    <div class="nav-links"><a class="active" href="index.html">Inicio</a><a href="catologo.html">Juegos</a><a href="material.html">Géneros</a><a href="normativas.html">Ofertas</a><a href="contacto.html">Contacto</a></div>
-  </nav></header> 
-  <main class="page-shell">
-    <section class="store-hero">
-      <div><span class="eyebrow">La experiencia empieza aquí</span><h1>Juega. Compite. Domina.</h1><p>Descubre juegos de acción, aventura, deportes y terror para vivir nuevas historias.</p><a class="primary-btn inline-btn" href="catologo.html">Explorar juegos</a></div>
-      <div class="hero-art"><span>LEVEL<br><b>UP</b></span></div>
+<body class="bg-dark text-light">
+
+  <header class="sticky-top bg-black border-bottom border-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4 py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <i class="bi bi-controller fs-3 text-primary"></i>
+        <span>Nexus</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Descubrir</a></li>
+          <li class="nav-item"><a class="nav-link active" href="juegos.html">Juegos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link active" href="biblioteca.html">Biblioteca</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cuenta.html">Cuenta</a></li>
+        </ul>
+
+        <form class="d-flex me-3 position-relative flex-grow-1 flex-lg-grow-0 my-2 my-lg-0" role="search" id="searchForm">
+          <i class="bi bi-search search-icon"></i>
+          <input class="form-control search-input ps-5 bg-secondary bg-opacity-25 text-light border-0" 
+                 type="search" 
+                 id="searchInput"
+                 placeholder="Buscar en la tienda..." 
+                 aria-label="Buscar">
+        </form>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="#" class="btn btn-outline-light btn-sm d-flex align-items-center gap-2 px-3 py-2" id="loginBtn">
+            <i class="bi bi-person-fill fs-6"></i>
+            <span>Iniciar Sesión</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-4">
+    
+    <section class="mb-5">
+      <div id="epicCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4 overflow-hidden shadow-lg">
+          
+          <div class="carousel-item active" data-bs-interval="5000">
+            <div class="hero-card position-relative">
+              <img src="img/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7.jpg" class="d-block w-100 hero-img" alt="Cyberpunk 2077">
+              <div class="hero-overlay p-4 p-md-5 d-flex flex-column justify-content-end">
+                <span class="badge bg-primary text-uppercase mb-2 fit-content">Ya disponible</span>
+                <h2 class="display-5 fw-bold">Cyberpunk 2077</h2>
+                <p class="col-md-8 text-secondary">En una metrópolis dominada por megacorporaciones, la tecnología es tu única arma 
+                                                   y tu humanidad, la moneda de cambio. Mejora tu cuerpo con implantes ilegales, 
+                                                   domina la red y sobrevive en las sombras de una ciudad sin ley.</p>
+                <div class="d-flex align-items-center gap-3 mt-2">
+                  <a href="juego.html?id=Cyberpunk 2077" class="btn btn-primary btn-lg px-4 fw-semibold">Comprar Ahora</a>
+                  <span class="fs-4 fw-bold">$49.99 USD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero-card position-relative">
+              <img src="img/gow.jpeg"class="d-block w-100 hero-img" alt="God of war Ragnarok">
+              <div class="hero-overlay p-4 p-md-5 d-flex flex-column justify-content-end">
+                <span class="badge bg-warning text-dark text-uppercase mb-2 fit-content">Oferta de la semana</span>
+                <h2 class="display-5 fw-bold">God Of War Ragnarok</h2>
+                <p class="col-md-8 text-secondary">El Fimbulwinter asola los reinos nórdicos. Acompaña a Kratos y Atreus en una odisea épica 
+                                                  a través de tierras peligrosas para encontrar respuestas antes de que estalle la batalla final 
+                                                  que destruirá el mundo..</p>
+                <div class="d-flex align-items-center gap-3 mt-2">
+                  <a href="juego.html?id=Gow of War ragnarok" class="btn btn-primary btn-lg px-4 fw-semibold">Ver Detalles</a>
+                  <div>
+                    <span class="badge bg-success me-2">-50%</span>
+                    <span class="fs-4 fw-bold">$19.99 USD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#epicCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#epicCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
     </section>
-    <section class="section-heading"><div><span class="eyebrow">Explora NEXUS</span><h2>Encuentra tu próximo juego</h2></div><a href="catologo.html">Ver todos →</a></section>
-    <section class="category-grid">
-      <a class="category-card" href="catologo.html"><span>🎮</span><h3>Todos los juegos</h3><p>Los lanzamientos y clásicos favoritos.</p></a>
-      <a class="category-card" href="material.html"><span>⚔</span><h3>Géneros</h3><p>Acción, aventura, deportes y terror.</p></a>
-      <a class="category-card" href="normativas.html"><span>⚡</span><h3>Ofertas</h3><p>Precios especiales en juegos seleccionados.</p></a>
+
+    <section>
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold fs-4 border-start border-4 border-primary ps-3">Juegos Destacados</h3>
+        <a href="#" class="text-secondary text-decoration-none hover-white">Ver todos</a>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="gamesGrid">
+        
+        <div class="col game-item">
+          <a href="juego.html?id=Cyberpunk 2077" class="text-decoration-none text-light">
+            <div class="card h-100 bg-secondary bg-opacity-10 border-0 card-hover rounded-3 overflow-hidden">
+              <div class="ratio ratio-3x4 overflow-hidden">
+                <img src="img/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7.jpg" class="card-img-top object-fit-cover" alt="Cyberpunk 2077">
+              </div>
+              <div class="card-body p-3">
+                <small class="text-secondary text-uppercase font-monospace fs-7">Juego Base</small>
+                <h5 class="card-title fs-6 fw-bold text-truncate mt-1">Cyberpunk 2077</h5>
+                <p class="card-text text-primary fw-bold mt-2">$49.99 USD</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col game-item">
+          <a href="juego.html?id=Gow Of War Ragnarok" class="text-decoration-none text-light">
+            <div class="card h-100 bg-secondary bg-opacity-10 border-0 card-hover rounded-3 overflow-hidden">
+              <div class="ratio ratio-3x4 overflow-hidden">
+                <img src="img/gow.jpeg" class="card-img-top object-fit-cover" alt="Gow of war Ragnarok">
+              </div>
+              <div class="card-body p-3">
+                <small class="text-secondary text-uppercase font-monospace fs-7">Juego Base</small>
+                <h5 class="card-title fs-6 fw-bold text-truncate mt-1">Gow of war Ragnarok</h5>
+                <div class="d-flex align-items-center gap-2 mt-2">
+                  <span class="badge bg-success">-50%</span>
+                  <span class="text-secondary text-decoration-line-through small">$40.00</span>
+                  <span class="card-text text-light fw-bold">$19.99 USD</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col game-item">
+          <a href="juego.html?id=Fortnite" class="text-decoration-none text-light">
+            <div class="card h-100 bg-secondary bg-opacity-10 border-0 card-hover rounded-3 overflow-hidden">
+              <div class="ratio ratio-3x4 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" class="card-img-top object-fit-cover" alt="Fortnite">
+              </div>
+              <div class="card-body p-3">
+                <small class="text-secondary text-uppercase font-monospace fs-7">Juego Gratuito</small>
+                <h5 class="card-title fs-6 fw-bold text-truncate mt-1">Fortnite</h5>
+                <p class="card-text text-success fw-bold mt-2">Gratis</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col game-item">
+          <a href="juego.html?id=FC 27" class="text-decoration-none text-light">
+            <div class="card h-100 bg-secondary bg-opacity-10 border-0 card-hover rounded-3 overflow-hidden">
+              <div class="ratio ratio-3x4 overflow-hidden">
+                <img src="img/9c0bf199f3618ac6c79c6cdff06d3662a7d89d46621e5ef05c100891e95a4a97.avif" class="card-img-top object-fit-cover" alt="FC 27">
+              </div>
+              <div class="card-body p-3">
+                <small class="text-secondary text-uppercase font-monospace fs-7">Juego Base</small>
+                <h5 class="card-title fs-6 fw-bold text-truncate mt-1">EA FC 27</h5>
+                <p class="card-text text-primary fw-bold mt-2">$69.00 USD</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
     </section>
-    <section class="section-heading"><div><span class="eyebrow">Selección de la semana</span><h2>Favoritos de la comunidad</h2></div></section>
-    <section class="product-grid">
-      <article class="product-card"><img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=700&q=85" alt="Videojuego de acción"><div><span class="product-tag">Acción</span><h3>Cyber Warfare</h3><strong>$39.990</strong><a href="contacto.html">Consultar</a></div></article>
-      <article class="product-card"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=700&q=85" alt="Videojuego de aventura"><div><span class="product-tag">Aventura</span><h3>Lost Realms</h3><strong>$34.990</strong><a href="contacto.html">Consultar</a></div></article>
-      <article class="product-card"><img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=700&q=85" alt="Setup gamer"><div><span class="product-tag">Setup</span><h3>Battle Station</h3><strong>$24.990</strong><a href="contacto.html">Consultar</a></div></article>
-    </section>
+
   </main>
-  <footer class="site-footer"><div class="footer-content"><span>© 2026 NEXUS · Videojuegos, comunidad y diversión.</span><span>Juega más. Disfruta siempre.</span></div></footer>
+
+  <footer class="bg-black text-secondary py-4 mt-5 border-top border-dark">
+    <div class="container text-center text-md-start">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="m-0 fs-7">© 2026 Nexus Store. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
