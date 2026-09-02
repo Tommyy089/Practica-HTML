@@ -1,67 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Bomberil - Inicio</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS | Tienda de juegos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="thumb_img_20240621174643" alt="Logo" width="64" height="64">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo EPP</a></li>
-            <li class="nav-item"><a class="nav-link" href="material.html">Material Menor</a></li>
-            <li class="nav-item"><a class="nav-link" href="normativas.html">Normativas</a></li>
-            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <h1 style="color:#ea199a; text-align:center; margin-top:20px;">Equipamiento para el Primer Respondedor</h1>
-    
-    <div id="carouselExample" class="carousel slide" data-bs-ride="true">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?auto=format&fit=crop&w=1200&h=400&q=80" class="d-block w-100" style="object-fit: cover; height: 400px;" alt="Carro">
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1611689342806-0863700ce1e4?auto=format&fit=crop&w=1200&h=400&q=80" class="d-block w-100" style="object-fit: cover; height: 400px;" alt="Bombero">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
-    </div>
-
-    <section class="container text-center mt-4">
-      <p class="colorUnico">Proveemos equipos de protección personal y herramientas tácticas de la más alta calidad en Chile. Sabemos que ante una emergencia, contar con equipo confiable marca la diferencia.</p>
-      <img src="https://images.unsplash.com/photo-1605814522437-023aeb962f90?auto=format&fit=crop&w=600&q=80" alt="Casco y equipo" class="img-fluid rounded mt-3 shadow">
+  <header class="topbar"><nav class="nav-container">
+    <a href="index.html" class="brand"><span class="brand-mark">NX</span><span>NEXUS</span></a>
+    <div class="nav-links"><a class="active" href="index.html">Inicio</a><a href="catologo.html">Juegos</a><a href="material.html">Géneros</a><a href="normativas.html">Ofertas</a><a href="contacto.html">Contacto</a></div>
+  </nav></header>
+  <main class="page-shell">
+    <section class="store-hero">
+      <div><span class="eyebrow">La experiencia empieza aquí</span><h1>Juega. Compite. Domina.</h1><p>Descubre juegos de acción, aventura, deportes y terror para vivir nuevas historias.</p><a class="primary-btn inline-btn" href="catologo.html">Explorar juegos</a></div>
+      <div class="hero-art"><span>LEVEL<br><b>UP</b></span></div>
+    </section>
+    <section class="section-heading"><div><span class="eyebrow">Explora NEXUS</span><h2>Encuentra tu próximo juego</h2></div><a href="catologo.html">Ver todos →</a></section>
+    <section class="category-grid">
+      <a class="category-card" href="catologo.html"><span>🎮</span><h3>Todos los juegos</h3><p>Los lanzamientos y clásicos favoritos.</p></a>
+      <a class="category-card" href="material.html"><span>⚔</span><h3>Géneros</h3><p>Acción, aventura, deportes y terror.</p></a>
+      <a class="category-card" href="normativas.html"><span>⚡</span><h3>Ofertas</h3><p>Precios especiales en juegos seleccionados.</p></a>
+    </section>
+    <section class="section-heading"><div><span class="eyebrow">Selección de la semana</span><h2>Favoritos de la comunidad</h2></div></section>
+    <section class="product-grid">
+      <article class="product-card"><img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=700&q=85" alt="Videojuego de acción"><div><span class="product-tag">Acción</span><h3>Cyber Warfare</h3><strong>$39.990</strong><a href="contacto.html">Consultar</a></div></article>
+      <article class="product-card"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=700&q=85" alt="Videojuego de aventura"><div><span class="product-tag">Aventura</span><h3>Lost Realms</h3><strong>$34.990</strong><a href="contacto.html">Consultar</a></div></article>
+      <article class="product-card"><img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=700&q=85" alt="Setup gamer"><div><span class="product-tag">Setup</span><h3>Battle Station</h3><strong>$24.990</strong><a href="contacto.html">Consultar</a></div></article>
     </section>
   </main>
-
-  <footer class="text-center mt-5 p-3 bg-dark text-white">
-      <p>Tienda Bomberil © 2026</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+  <footer class="site-footer"><div class="footer-content"><span>© 2026 NEXUS · Videojuegos, comunidad y diversión.</span><span>Juega más. Disfruta siempre.</span></div></footer>
 </body>
 </html>
