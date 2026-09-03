@@ -1,184 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto | NEXUS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/estilos.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <nav class="nav-container" aria-label="Navegación principal">
-        <a href="index.html" class="brand" aria-label="Inicio">
-          <span class="brand-mark">NX</span>
-          <span>NEXUS</span>
-        </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Nexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <!-- Animación personalizada para el mensaje de éxito -->
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animacion-aparecer {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+    </style>
+</head>
+<body class="bg-black text-light">
 
-        <div class="nav-links">
-          <a href="index.html">Inicio</a>
-          <a href="Juegos.html">Juegos</a>
-          <a href="material.html">Biblioteca</a>
-          <a href="normativas.html">Ofertas</a>
-          <a href="contacto.html" class="active">Contacto</a>
+  <!-- HEADER -->
+  <header class="sticky-top bg-black border-bottom border-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4 py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <i class="bi bi-controller fs-3 text-primary"></i>
+        <span>Nexus</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
+          <li class="nav-item"><a class="nav-link" href="index.html">Descubrir</a></li>
+          <li class="nav-item"><a class="nav-link" href="juegos.html">Juegos</a></li>
+          <li class="nav-item"><a class="nav-link active text-primary fw-bold" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="biblioteca.html">Biblioteca</a></li>
+          <li class="nav-item"><a class="nav-link" href="cuenta.html">Cuenta</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="#" class="btn btn-outline-light btn-sm d-flex align-items-center gap-2 px-3 py-2">
+            <i class="bi bi-person-fill fs-6"></i><span>Iniciar Sesión</span>
+          </a>
         </div>
-      </nav>
-    </header>
-
-    <main class="page-shell">
-      <section class="hero-contact">
-        <div class="hero-copy">
-          <span class="eyebrow">Tu próximo nivel comienza aquí</span>
-          <h1>Conectemos para llevar tu setup al siguiente nivel.</h1>
-          <p>
-            Somos una tienda dedicada a los videojuegos, con títulos de acción, aventura,
-            deportes y terror para todo tipo de jugador.
-          </p>
-
-          <div class="hero-metrics">
-            <div class="metric">
-              <strong>24h</strong>
-              <span>Respuesta</span>
-            </div>
-            <div class="metric">
-              <strong>+500</strong>
-              <span>Jugadores</span>
-            </div>
-            <div class="metric">
-              <strong>99%</strong>
-              <span>Valoración</span>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-panel" aria-label="Atención inmediata">
-          <div class="panel-head">
-            <h2>Estado de atención</h2>
-            <span class="status-pill"><span class="status-dot"></span> Online</span>
-          </div>
-
-          <ul class="quick-list">
-            <li>
-              <span>01</span>
-              <div>
-                <strong>Recomendaciones</strong>
-                <p>Te ayudamos a elegir tu próximo juego según tu estilo.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <strong>Pedidos</strong>
-                <p>Consulta stock, lanzamientos y precios disponibles.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <strong>Soporte gamer</strong>
-                <p>Resolvemos tus dudas sobre juegos, géneros y pedidos.</p>
-              </div>
-            </li>
-          </ul>
-        </aside>
-      </section>
-
-      <section class="contact-grid">
-        <aside class="contact-card" aria-label="Información de contacto">
-          <h3>Contacto directo</h3>
-
-          <div class="info-list">
-            <div class="info-item">
-              <div class="info-icon">✦</div>
-              <div>
-                <strong>Correo</strong>
-                <a href="mailto:hola@nexus.cl">hola@nexus.cl</a>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon">☎</div>
-              <div>
-                <strong>Teléfono</strong>
-                <a href="tel:+56912345678">+56 9 1234 5678</a>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon">▣</div>
-              <div>
-                <strong>Ubicación</strong>
-                <p>Av. Tecnópolis 1200, Santiago, Chile</p>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon">◌</div>
-              <div>
-                <strong>Horario</strong>
-                <p>Lunes a domingo · 10:00 - 22:00</p>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        <section class="contact-form" aria-label="Formulario de contacto">
-          <h3>Escríbenos</h3>
-          <form id="contactForm">
-            <div class="form-row">
-              <div class="field">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required />
-              </div>
-
-              <div class="field">
-                <label for="cargo">Usuario / plataforma</label>
-                <input type="text" id="cargo" name="cargo" placeholder="Tu usuario o plataforma favorita" required />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="field">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="correo@empresa.cl" required />
-              </div>
-
-              <div class="field">
-                <label for="motivo">¿Qué buscas?</label>
-                <select id="motivo" name="motivo" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="juegos">Videojuegos</option>
-                  <option value="generos">Recomendación por género</option>
-                  <option value="otro">Otra consulta</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="mensaje">Tu mensaje</label>
-              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué juego estás buscando..." required></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="primary-btn">Enviar mensaje</button>
-              <span class="form-note">Te responderemos en menos de 24 horas.</span>
-            </div>
-
-            <div id="formStatus" class="form-status" aria-live="polite"></div>
-          </form>
-        </section>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-content">
-        <span>© <span id="year"></span> NEXUS. Videojuegos, comunidad y diversión.</span>
-        <span>Juega más. Disfruta siempre.</span>
       </div>
-    </footer>
+    </nav>
+  </header>
 
-    <script src="js/script.js"></script>
-  </body>
+  <!-- CONTENIDO DE CONTACTO -->
+  <main class="container py-5 mt-4">
+    
+    <div class="text-center mb-5 pb-3">
+      <span class="text-primary fw-bold tracking-wide text-uppercase small">Soporte Técnico & Consultas</span>
+      <h1 class="display-4 fw-bold mt-2">¿En qué podemos <span class="text-primary">ayudarte?</span></h1>
+      <p class="text-secondary mx-auto mt-3" style="max-width: 600px;">
+        Ya sea que tengas un problema con una compra, dudas sobre un juego o simplemente quieras dejarnos tus comentarios, nuestro equipo está listo para asistirte.
+      </p>
+    </div>
+
+    <div class="row g-5 align-items-center">
+      
+      <!-- Columna Izquierda: Información -->
+      <div class="col-lg-5">
+        <div class="bg-dark bg-opacity-50 p-4 p-md-5 rounded-4 border border-secondary border-opacity-25 h-100 shadow-lg">
+          <h3 class="fw-bold mb-4">Información de Contacto</h3>
+          
+          <div class="d-flex align-items-start gap-3 mb-4">
+            <div class="bg-primary bg-opacity-25 p-3 rounded-circle text-primary">
+              <i class="bi bi-geo-alt-fill fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Ubicación Central</h6>
+              <p class="text-secondary mb-0">Santiago, Región Metropolitana<br>Chile</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 mb-4">
+            <div class="bg-primary bg-opacity-25 p-3 rounded-circle text-primary">
+              <i class="bi bi-envelope-at-fill fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Correo Electrónico</h6>
+              <p class="text-secondary mb-0">soporte@nexusgames.com<br>ventas@nexusgames.com</p>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 mb-5">
+            <div class="bg-primary bg-opacity-25 p-3 rounded-circle text-primary">
+              <i class="bi bi-headset fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Línea de Asistencia</h6>
+              <p class="text-secondary mb-0">+56 2 2345 6789<br><small>Lunes a Viernes, 9:00 - 18:00</small></p>
+            </div>
+          </div>
+
+          <hr class="border-secondary mb-4">
+
+          <h6 class="fw-bold mb-3">Síguenos en nuestras redes</h6>
+          <div class="d-flex gap-3">
+            <a href="#" class="btn btn-outline-secondary rounded-circle px-3 py-2 border-opacity-50 hover-primary"><i class="bi bi-discord"></i></a>
+            <a href="#" class="btn btn-outline-secondary rounded-circle px-3 py-2 border-opacity-50 hover-primary"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-outline-secondary rounded-circle px-3 py-2 border-opacity-50 hover-primary"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-outline-secondary rounded-circle px-3 py-2 border-opacity-50 hover-primary"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Formulario y Mensaje de Éxito -->
+      <div class="col-lg-7">
+        
+        <!-- Formulario de Contacto -->
+        <form id="formularioContacto" class="bg-dark bg-opacity-25 p-4 p-md-5 rounded-4 border border-secondary border-opacity-25">
+          <div class="row g-4">
+            
+            <div class="col-md-6">
+              <label for="nombre" class="form-label text-secondary fw-semibold small">Tu Nombre</label>
+              <input type="text" class="form-control bg-black border-secondary border-opacity-50 text-light py-2 px-3 focus-ring focus-ring-primary" id="nombre" placeholder="Ej. Bryan" required>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="email" class="form-label text-secondary fw-semibold small">Correo Electrónico</label>
+              <input type="email" class="form-control bg-black border-secondary border-opacity-50 text-light py-2 px-3 focus-ring focus-ring-primary" id="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+
+            <div class="col-12">
+              <label for="asunto" class="form-label text-secondary fw-semibold small">Asunto</label>
+              <select class="form-select bg-black border-secondary border-opacity-50 text-light py-2 px-3 focus-ring focus-ring-primary" id="asunto" required>
+                <option value="" disabled selected>Selecciona el motivo de tu mensaje...</option>
+                <option value="1">Problema con una compra / Reembolso</option>
+                <option value="2">Soporte técnico de un juego</option>
+                <option value="3">Problemas con mi cuenta Nexus</option>
+                <option value="4">Sugerencias o Comentarios</option>
+                <option value="5">Otro</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="mensaje" class="form-label text-secondary fw-semibold small">Mensaje</label>
+              <textarea class="form-control bg-black border-secondary border-opacity-50 text-light py-3 px-3 focus-ring focus-ring-primary" id="mensaje" rows="5" placeholder="Escribe todos los detalles posibles aquí..." required></textarea>
+            </div>
+
+            <div class="col-12 mt-4">
+              <button type="submit" id="btnEnviar" class="btn btn-primary w-100 py-3 fw-bold d-flex justify-content-center align-items-center gap-2">
+                <span id="textoBtn">ENVIAR MENSAJE</span>
+                <i id="iconoBtn" class="bi bi-send-fill"></i>
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- Mensaje de Éxito Oculto -->
+        <div id="mensajeExito" class="bg-dark bg-opacity-25 p-5 rounded-4 border border-success border-opacity-50 text-center d-none">
+          <i class="bi bi-check-circle-fill text-success mb-3" style="font-size: 5rem;"></i>
+          <h2 class="fw-bold text-light">¡Mensaje Enviado!</h2>
+          <p class="text-secondary mt-3 mb-4">Hemos recibido tu consulta correctamente. Nuestro equipo de soporte la revisará y te contactará a tu correo electrónico a la brevedad.</p>
+          <button type="button" id="btnNuevoMensaje" class="btn btn-outline-light px-4 py-2">Enviar otro mensaje</button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-secondary py-4 mt-5 border-top border-dark">
+    <div class="container text-center text-md-start">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="m-0 fs-7">© 2026 Nexus Store. Todos los derechos reservados.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-secondary text-decoration-none hover-white fs-7">Términos de servicio</a>
+          <a href="#" class="text-secondary text-decoration-none hover-white fs-7">Política de privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script para la animación y el cambio de estado -->
+  <script>
+    document.getElementById('formularioContacto').addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita que la página recargue al instante
+
+      // Seleccionamos los elementos
+      const btnEnviar = document.getElementById('btnEnviar');
+      const textoBtn = document.getElementById('textoBtn');
+      const iconoBtn = document.getElementById('iconoBtn');
+      const formulario = document.getElementById('formularioContacto');
+      const mensajeExito = document.getElementById('mensajeExito');
+
+      // 1. Cambiamos el estado del botón a "Cargando"
+      btnEnviar.disabled = true;
+      textoBtn.innerText = 'ENVIANDO...';
+      iconoBtn.className = 'spinner-border spinner-border-sm';
+
+      // 2. Simulamos un tiempo de envío (1.5 segundos)
+      setTimeout(() => {
+        // Ocultar formulario
+        formulario.classList.add('d-none');
+        
+        // Mostrar mensaje de éxito con la animación
+        mensajeExito.classList.remove('d-none');
+        mensajeExito.classList.add('animacion-aparecer');
+
+        // Restauramos el botón y limpiamos el formulario por si quiere enviar otro
+        btnEnviar.disabled = false;
+        textoBtn.innerText = 'ENVIAR MENSAJE';
+        iconoBtn.className = 'bi bi-send-fill';
+        formulario.reset();
+      }, 1500);
+    });
+
+    // Acción para el botón de "Enviar otro mensaje"
+    document.getElementById('btnNuevoMensaje').addEventListener('click', function() {
+      document.getElementById('mensajeExito').classList.add('d-none');
+      document.getElementById('mensajeExito').classList.remove('animacion-aparecer');
+      document.getElementById('formularioContacto').classList.remove('d-none');
+    });
+  </script>
+</body>
 </html>

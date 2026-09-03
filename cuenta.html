@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus - Mi Cuenta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-dark text-light">
+
+  <header class="sticky-top bg-black border-bottom border-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4 py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <i class="bi bi-controller fs-3 text-primary"></i>
+        <span>Nexus</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
+          <li class="nav-item"><a class="nav-link" href="index.html">Descubrir</a></li>
+          <li class="nav-item"><a class="nav-link" href="juegos.html">Juegos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="biblioteca.html">Biblioteca</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cuenta.html">Cuenta</a></li>
+        </ul>
+
+        <form class="d-flex me-3 position-relative flex-grow-1 flex-lg-grow-0 my-2 my-lg-0" role="search" id="searchForm">
+          <i class="bi bi-search search-icon"></i>
+          <input class="form-control search-input ps-5 bg-secondary bg-opacity-25 text-light border-0" 
+                 type="search" 
+                 placeholder="Buscar en la tienda..." 
+                 aria-label="Buscar">
+        </form>
+
+        <div class="d-flex align-items-center gap-2">
+          <span class="text-light fw-bold me-2" id="navUsername">GamerPro2026</span>
+          <button class="btn btn-outline-danger btn-sm d-flex align-items-center gap-2 px-3 py-2" id="logoutBtn">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Salir</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    
+    <!-- Banner de Perfil -->
+    <div class="card bg-secondary bg-opacity-10 border-0 rounded-4 p-4 mb-4">
+      <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=150&q=80" 
+               alt="Avatar de usuario" 
+               class="rounded-circle profile-avatar border border-3 border-primary object-fit-cover" 
+               id="profileAvatar">
+          <label for="avatarUpload" class="btn btn-primary btn-sm rounded-circle position-absolute bottom-0 end-0 p-2 shadow" title="Cambiar foto">
+            <i class="bi bi-camera-fill"></i>
+          </label>
+          <input type="file" id="avatarUpload" class="d-none" accept="image/*">
+        </div>
+        <div class="text-center text-md-start">
+          <h2 class="fw-bold m-0" id="displayUsername">GamerPro2026</h2>
+          <p class="text-secondary m-0" id="displayEmail">gamerpro@nexus.com</p>
+          <span class="badge bg-primary mt-2">Nivel 15 • Coleccionista</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Menú Lateral -->
+      <div class="col-lg-3">
+        <div class="list-group list-group-flush rounded-3 overflow-hidden bg-secondary bg-opacity-10">
+          <button class="list-group-item list-group-item-action bg-transparent text-light border-0 p-3 active" data-bs-toggle="list" data-bs-target="#tab-perfil">
+            <i class="bi bi-person-fill me-2 text-primary"></i> Información Personal
+          </button>
+          <button class="list-group-item list-group-item-action bg-transparent text-light border-0 p-3" data-bs-toggle="list" data-bs-target="#tab-compras">
+            <i class="bi bi-bag-check-fill me-2 text-primary"></i> Historial de Compras
+          </button>
+          <button class="list-group-item list-group-item-action bg-transparent text-light border-0 p-3" data-bs-toggle="list" data-bs-target="#tab-seguridad">
+            <i class="bi bi-shield-lock-fill me-2 text-primary"></i> Seguridad
+          </button>
+        </div>
+      </div>
+
+      <!-- Contenido de Solapas -->
+      <div class="col-lg-9">
+        <div class="tab-content">
+          
+          <!-- Tab 1: Información Personal -->
+          <div class="tab-pane fade show active" id="tab-perfil">
+            <div class="card bg-secondary bg-opacity-10 border-0 rounded-4 p-4">
+              <h4 class="fw-bold mb-4">Editar Perfil</h4>
+              <form id="profileForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label text-secondary fs-7">Nombre de Usuario</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" id="inputUsername" value="GamerPro2026" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-secondary fs-7">Correo Electrónico</label>
+                    <input type="email" class="form-control bg-dark text-light border-secondary" id="inputEmail" value="gamerpro@nexus.com" required>
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label text-secondary fs-7">Biografía</label>
+                    <textarea class="form-control bg-dark text-light border-secondary" rows="3" placeholder="Escribe algo sobre ti...">Jugador de RPGs y juegos de estrategia.</textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4 px-4 fw-semibold">Guardar Cambios</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Tab 2: Historial de Compras -->
+          <div class="tab-pane fade" id="tab-compras">
+            <div class="card bg-secondary bg-opacity-10 border-0 rounded-4 p-4">
+              <h4 class="fw-bold mb-4">Historial de Transacciones</h4>
+              <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle bg-transparent">
+                  <thead>
+                    <tr class="text-secondary">
+                      <th>Juego</th>
+                      <th>Fecha</th>
+                      <th>Precio</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fw-bold">God of War Ragnarok</td>
+                      <td class="text-secondary">01 Sep 2026</td>
+                      <td>$19.99 USD</td>
+                      <td><span class="badge bg-success">Completado</span></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Cyberpunk 2077</td>
+                      <td class="text-secondary">15 Ago 2026</td>
+                      <td>$49.99 USD</td>
+                      <td><span class="badge bg-success">Completado</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Seguridad -->
+          <div class="tab-pane fade" id="tab-seguridad">
+            <div class="card bg-secondary bg-opacity-10 border-0 rounded-4 p-4">
+              <h4 class="fw-bold mb-4">Seguridad de la Cuenta</h4>
+              <form id="securityForm">
+                <div class="mb-3">
+                  <label class="form-label text-secondary fs-7">Contraseña Actual</label>
+                  <input type="password" class="form-control bg-dark text-light border-secondary" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label text-secondary fs-7">Nueva Contraseña</label>
+                  <input type="password" class="form-control bg-dark text-light border-secondary" required>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2 px-4 fw-semibold">Actualizar Contraseña</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-black text-secondary py-4 mt-5 border-top border-dark">
+    <div class="container text-center text-md-start">
+      <p class="m-0 fs-7">© 2026 Nexus Store. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cuenta.js"></script>
+</body>
+</html>

@@ -25,6 +25,14 @@ body {
   box-shadow: 0 0 0 2px #0078f2;
 }
 
+/* Efecto Cristal (Glassmorphism) para la barra superior */
+header.sticky-top {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
 /* Carousel Hero */
 .hero-card {
   height: 480px;
@@ -41,11 +49,15 @@ body {
   background: linear-gradient(to top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
+.hero-overlay p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
 .fit-content {
   width: fit-content;
 }
 
-/* Interacciones y Tarjetas */
+/* Interacciones y Tarjetas Originales */
 .card-hover {
   transition: transform 0.2s ease, background-color 0.2s ease;
   cursor: pointer;
@@ -56,6 +68,40 @@ body {
   background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
+.card-title {
+  color: #ffffff !important;
+}
+
+.card-body small,
+.card-body .text-secondary {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Nuevas Microinteracciones premium para las tarjetas de juegos (game-clean-card) */
+.game-clean-card {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+  border-radius: 1rem;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-clean-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  /* Un brillo azul sutil alrededor de la tarjeta al pasar el cursor */
+  box-shadow: 0 15px 30px rgba(13, 110, 253, 0.25); 
+}
+
+.game-clean-card img {
+  transition: transform 0.5s ease;
+}
+
+/* Pequeño zoom a la imagen de portada al pasar el cursor */
+.game-clean-card:hover img {
+  transform: scale(1.05); 
+}
+
+/* Utilidades adicionales */
 .hover-white:hover {
   color: #ffffff !important;
 }
@@ -74,16 +120,28 @@ body {
   background-color: #0060c4;
   border-color: #0060c4;
 }
-
-.hero-overlay p {
-  color: rgba(255, 255, 255, 0.85) !important;
+/* Ajuste perfecto de espaciado para los textos del catálogo */
+.game-clean-card {
+    padding-bottom: 12px; /* Le da aire a la tarjeta por debajo */
 }
 
-.card-title {
-  color: #ffffff !important;
+.game-clean-card img {
+    margin-bottom: 15px; /* Separa la imagen del título */
 }
 
-.card-body small,
-.card-body .text-secondary {
-  color: rgba(255, 255, 255, 0.7) !important;
+.game-clean-card h6,
+.game-clean-card .text-muted-custom {
+    padding-left: 6px; /* Evita que el borde redondeado corte la letra U */
+    padding-right: 6px;
+}
+
+.game-clean-card h6 {
+    font-size: 1.05rem !important; 
+    font-weight: 500 !important;
+}
+
+.game-clean-card .text-muted-custom span {
+    font-size: 0.95rem !important; 
+    color: rgba(255, 255, 255, 0.9) !important; 
+    font-weight: 500;
 }
