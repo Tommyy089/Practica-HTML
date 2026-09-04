@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spider-Man - Nexus</title>
+    <title>Rocket League® - Nexus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/estilos.css">
@@ -28,9 +28,15 @@
           <li class="nav-item"><a class="nav-link" href="biblioteca.html">Biblioteca</a></li>
           <li class="nav-item"><a class="nav-link" href="cuenta.html">Cuenta</a></li>
         </ul>
-        <div class="d-flex align-items-center gap-2">
-          <a href="#" class="btn btn-outline-light btn-sm d-flex align-items-center gap-2 px-3 py-2">
-            <i class="bi bi-person-fill fs-6"></i><span>Iniciar Sesión</span>
+        <div class="d-flex align-items-center gap-3">
+          <!-- Botón del Carrito en Detalle -->
+          <button class="btn btn-outline-light btn-sm d-flex align-items-center gap-2 px-3 py-2 position-relative" data-bs-toggle="offcanvas" data-bs-target="#carritoLateral" aria-controls="carritoLateral">
+            <i class="bi bi-cart3 fs-6"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">2</span>
+          </button>
+          
+          <a href="cuenta.html" class="btn btn-primary btn-sm d-flex align-items-center gap-2 px-3 py-2">
+            <i class="bi bi-person-fill fs-6"></i><span>Mi Perfil</span>
           </a>
         </div>
       </div>
@@ -49,15 +55,15 @@
       
       <!-- Columna Izquierda (Imagen y Descripción) -->
       <div class="col-lg-8">
-        <!-- Imagen Principal de Spider-Man -->
-        <img src="./Spider1.avif" class="img-fluid rounded-4 w-100 mb-4 object-fit-cover" style="height: 450px;" alt="Spider Man">
+        <!-- Imagen Principal de Rocket League -->
+        <img src="./Rocket.jpg" class="img-fluid rounded-4 w-100 mb-4 object-fit-cover" style="height: 450px;" alt="Rocket League">
         
         <h3 class="fw-bold mb-3 border-start border-4 border-primary ps-3">Acerca de este juego</h3>
         <p class="text-secondary lh-lg mb-4">
-          En Marvel's Spider-Man, los mundos de Peter Parker y Spider-Man colisionan en una historia original llena de acción. 
-          Juega como un Peter experimentado que lucha contra grandes crímenes y villanos icónicos en la Nueva York de Marvel. 
-          Siente todo el poder de Spider-Man con un combate improvisado, acrobacias dinámicas, un recorrido urbano fluido y 
-          las interacciones con el entorno que lo convierten en la experiencia definitiva del trepamuros.
+          ¡Descarga y compite en este híbrido de alto octanaje de fútbol arcade y caos vehicular! Desbloquea objetos 
+          en el Rocket Pass, sube tu rango competitivo, únete a torneos, completa desafíos y disfruta de la progresión 
+          multiplataforma. Domina los controles basados en la física y surca los cielos para realizar goles espectaculares 
+          en la arena de juego más frenética que existe.
         </p>
 
         <!-- Requisitos del Sistema -->
@@ -67,20 +73,20 @@
             <h6 class="text-light fw-bold">Mínimos:</h6>
             <ul class="list-unstyled">
               <li><strong>SO:</strong> Windows 10 - 64-Bit</li>
-              <li><strong>Procesador:</strong> Intel Core i3-4160 / AMD equivalente</li>
-              <li><strong>Memoria:</strong> 8 GB de RAM</li>
-              <li><strong>Gráficos:</strong> NVIDIA GTX 950 / AMD Radeon RX 470</li>
-              <li><strong>Almacenamiento:</strong> 75 GB de espacio disponible</li>
+              <li><strong>Procesador:</strong> 2.5 GHz Dual Core</li>
+              <li><strong>Memoria:</strong> 4 GB de RAM</li>
+              <li><strong>Gráficos:</strong> NVIDIA GeForce 760 / AMD Radeon R7 270X</li>
+              <li><strong>Almacenamiento:</strong> 20 GB de espacio disponible</li>
             </ul>
           </div>
           <div class="col-md-6">
             <h6 class="text-light fw-bold">Recomendados:</h6>
             <ul class="list-unstyled">
               <li><strong>SO:</strong> Windows 10 / 11 - 64-Bit</li>
-              <li><strong>Procesador:</strong> Intel Core i5-4670 / AMD Ryzen 5 1600</li>
-              <li><strong>Memoria:</strong> 16 GB de RAM</li>
-              <li><strong>Gráficos:</strong> NVIDIA GTX 1060 6GB / AMD Radeon RX 580</li>
-              <li><strong>Almacenamiento:</strong> 75 GB de espacio disponible (SSD)</li>
+              <li><strong>Procesador:</strong> 3.0+ GHz Quad Core</li>
+              <li><strong>Memoria:</strong> 8 GB de RAM</li>
+              <li><strong>Gráficos:</strong> NVIDIA GeForce GTX 1060 / AMD Radeon RX 470</li>
+              <li><strong>Almacenamiento:</strong> 20 GB de espacio disponible (SSD)</li>
             </ul>
           </div>
         </div>
@@ -88,31 +94,42 @@
 
       <!-- Columna Derecha (Precio, Detalles, Comprar) -->
       <div class="col-lg-4 mt-4 mt-lg-0">
-        <h1 class="fw-bold display-6">Spider Man</h1>
-        <p class="text-secondary mb-4">Por Insomniac Games / PlayStation PC</p>
+        <h1 class="fw-bold display-6">Rocket League®</h1>
+        <p class="text-secondary mb-4">Por Psyonix LLC</p>
         
         <div class="bg-secondary bg-opacity-10 p-4 rounded-4 mb-4">
-          <span class="badge bg-primary text-uppercase mb-2">Juego Base</span>
+          <span class="badge bg-success text-uppercase mb-2">Free to Play</span>
           <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="fs-2 fw-bold text-light">US$24.99</span>
+            <span class="fs-2 fw-bold text-light">Gratuito</span>
           </div>
-          <button class="btn btn-primary w-100 py-3 fw-bold mb-2">COMPRAR AHORA</button>
-          <button class="btn btn-outline-light w-100 py-2"><i class="bi bi-cart-plus"></i> Añadir al carrito</button>
+          <!-- Botones con atributos para el carrito -->
+          <button class="btn btn-primary w-100 py-3 fw-bold mb-2 btn-agregar-carrito" 
+                  data-titulo="Rocket League®" 
+                  data-precio="Gratuito" 
+                  data-imagen="./Rocket.jpg">
+            <i class="bi bi-download me-2"></i> JUGAR GRATIS
+          </button>
+          <button class="btn btn-outline-light w-100 py-2 btn-agregar-carrito" 
+                  data-titulo="Rocket League®" 
+                  data-precio="Gratuito" 
+                  data-imagen="./Rocket.jpg">
+            <i class="bi bi-plus-lg"></i> Añadir a mi biblioteca
+          </button>
         </div>
 
         <!-- Ficha Técnica -->
         <ul class="list-group list-group-flush bg-transparent">
           <li class="list-group-item bg-transparent text-light border-secondary border-opacity-25 d-flex justify-content-between">
             <span class="text-secondary">Género</span>
-            <span class="fw-semibold">Acción, Aventura, Mundo Abierto</span>
+            <span class="fw-semibold">Acción, Deportes, Carreras</span>
           </li>
           <li class="list-group-item bg-transparent text-light border-secondary border-opacity-25 d-flex justify-content-between">
             <span class="text-secondary">Características</span>
-            <span class="fw-semibold text-end">Un jugador, Logros, Compatible con mando</span>
+            <span class="fw-semibold text-end">Multijugador Online, Cross-Play, Pantalla Dividida</span>
           </li>
           <li class="list-group-item bg-transparent text-light border-secondary border-opacity-25 d-flex justify-content-between">
             <span class="text-secondary">Clasificación</span>
-            <span class="fw-semibold text-warning">+16 (Adolescentes)</span>
+            <span class="fw-semibold text-primary">+3 (Para todos)</span>
           </li>
         </ul>
       </div>
@@ -123,7 +140,7 @@
     <div class="mt-5 pt-3">
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h3 class="fw-bold border-start border-4 border-primary ps-3">Reseñas de Jugadores</h3>
-        <span class="text-primary fw-bold"><i class="bi bi-star-fill text-warning"></i> 4.8 / 5 (214,000 reseñas)</span>
+        <span class="text-primary fw-bold"><i class="bi bi-star-fill text-warning"></i> 4.6 / 5 (980,450 reseñas)</span>
       </div>
       
       <div class="row g-4">
@@ -133,13 +150,13 @@
             <div class="d-flex justify-content-between align-items-center mb-3">
               <div class="d-flex align-items-center gap-2">
                 <i class="bi bi-person-circle fs-3 text-secondary"></i>
-                <span class="fw-bold">WebHead_NYC</span>
+                <span class="fw-bold">AeroStriker</span>
               </div>
               <div class="text-warning">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
             </div>
-            <p class="text-secondary mb-0">"El sistema de balanceo es el mejor que se ha hecho en cualquier juego de Spider-Man, es hipnótico moverse por la ciudad. La historia es sumamente emotiva y los Seis Siniestros están espectaculares."</p>
+            <p class="text-secondary mb-0">"La premisa es súper simple: fútbol con coches. Pero la cantidad de horas que necesitas para dominar los vuelos y el control del balón lo hacen uno de los juegos más competitivos y satisfactorios del mercado."</p>
           </div>
         </div>
 
@@ -149,19 +166,59 @@
             <div class="d-flex justify-content-between align-items-center mb-3">
               <div class="d-flex align-items-center gap-2">
                 <i class="bi bi-person-circle fs-3 text-secondary"></i>
-                <span class="fw-bold">ParkerFan99</span>
+                <span class="fw-bold">CasualGamer_23</span>
               </div>
               <div class="text-warning">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
               </div>
             </div>
-            <p class="text-secondary mb-0">"El port a PC está súper bien optimizado y se ve hermoso. El combate al estilo Arkham le sienta perfecto a Spidey y la cantidad de trajes desbloqueables rinde homenaje a todos los cómics y películas."</p>
+            <p class="text-secondary mb-0">"Increíble para jugar unas partidas rápidas con amigos, especialmente con el cross-play donde no importa en qué consola jueguen los demás. Los cosméticos están geniales aunque algunos son algo caros."</p>
           </div>
         </div>
       </div>
     </div>
 
   </main>
+
+  <!-- CARRITO DE COMPRAS LATERAL (OFFCANVAS) -->
+  <div class="offcanvas offcanvas-end bg-dark text-light border-start border-secondary border-opacity-25 shadow-lg" tabindex="-1" id="carritoLateral" aria-labelledby="carritoLabel">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 bg-black">
+      <h5 class="offcanvas-title fw-bold d-flex align-items-center gap-2" id="carritoLabel">
+        <i class="bi bi-cart-check-fill text-primary"></i> Tu Carrito
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    
+    <div class="offcanvas-body d-flex flex-column bg-black">
+      <div class="flex-grow-1">
+        <!-- Producto de ejemplo -->
+        <div class="d-flex gap-3 mb-3 pb-3 border-bottom border-secondary border-opacity-25">
+          <img src="./Rocket.jpg" alt="Rocket League" class="rounded-3 object-fit-cover" width="70" height="70">
+          <div class="flex-grow-1">
+            <h6 class="mb-1 fw-bold fs-7 text-truncate" style="max-width: 180px;">Rocket League®</h6>
+            <p class="text-secondary mb-0 small">Free to Play</p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <span class="fw-bold text-light">Gratuito</span>
+              <button class="btn btn-link text-danger p-0 text-decoration-none small hover-white" title="Eliminar"><i class="bi bi-trash3-fill"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-secondary fw-semibold">Subtotal</span>
+          <span class="fs-4 fw-bold text-light">Gratuito</span>
+        </div>
+        <button class="btn btn-primary w-100 py-3 fw-bold mb-2 d-flex justify-content-center align-items-center gap-2">
+          <i class="bi bi-credit-card-fill"></i> RECLAMAR / DESCARGAR
+        </button>
+        <button class="btn btn-outline-secondary w-100 py-2 fw-semibold border-opacity-50 hover-white" data-bs-dismiss="offcanvas">
+          Seguir viendo
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-black text-secondary py-4 mt-5 border-top border-dark">
@@ -172,6 +229,35 @@
     </div>
   </footer>
 
+  <!-- Script para la funcionalidad del carrito -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const botonesComprar = document.querySelectorAll('.btn-agregar-carrito');
+
+      botonesComprar.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+          const titulo = boton.getAttribute('data-titulo');
+          if (!titulo) return;
+
+          e.preventDefault();
+          const precio = boton.getAttribute('data-precio');
+          const imagen = boton.getAttribute('data-imagen');
+
+          let carrito = JSON.parse(localStorage.getItem('nexus_carrito')) || [];
+          carrito.push({ titulo, precio, imagen });
+          localStorage.setItem('nexus_carrito', JSON.stringify(carrito));
+
+          const carritoElemento = document.getElementById('carritoLateral');
+          if (carritoElemento) {
+            const bsOffcanvas = new bootstrap.Offcanvas(carritoElemento);
+            bsOffcanvas.show();
+          }
+        });
+      });
+    });
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<script src="js/carrito.js"></script>
 </html>

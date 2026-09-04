@@ -3,222 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus - Mi Biblioteca</title>
+    <title>Mi Biblioteca - Nexus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/estilos.css">
+    
     <style>
-        /* Efecto de Tarjeta con Fondo Difuminado para la Biblioteca */
-        .library-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            min-height: 160px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 24px;
-            transition: transform 0.2s ease-in-out, border-color 0.2s;
-            border: 1px solid #27272a;
-            text-decoration: none;
-        }
-
-        .library-card:hover {
-            transform: translateY(-5px);
-            border-color: #3b82f6;
-        }
-
-        /* La imagen de fondo difuminada */
-        .library-card-bg {
-            position: absolute;
-            top: -15px; 
-            left: -15px; 
-            right: -15px; 
-            bottom: -15px;
-            background-size: cover;
-            background-position: center;
-            /* blur aplica el difuminado y brightness oscurece la imagen */
-            filter: blur(8px) brightness(0.35);
-            z-index: 0;
-            transition: filter 0.3s;
-        }
-
-        .library-card:hover .library-card-bg {
-            filter: blur(6px) brightness(0.5);
-        }
-
-        /* El contenido que va por encima del fondo */
-        .library-card-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .btn-library {
-            width: fit-content;
-            font-size: 0.85rem;
-            padding: 6px 20px;
-        }
+      /* Estilos específicos para las tarjetas de la biblioteca */
+      .library-card {
+        background-color: #1a1a1a;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .progress-custom {
+        height: 6px;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .btn-play {
+        background-color: #198754; /* Verde para destacar que está listo para jugar */
+        color: white;
+        border: none;
+      }
+      .btn-play:hover {
+        background-color: #146c43;
+        color: white;
+      }
+      .filter-pill.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white !important;
+      }
     </style>
 </head>
-<body class="bg-dark text-light">
+<body class="bg-black text-light">
 
-  <!-- HEADER -->
+  <!-- HEADER CON USUARIO LOGUEADO -->
   <header class="sticky-top bg-black border-bottom border-dark">
     <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-4 py-2">
       <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
         <i class="bi bi-controller fs-3 text-primary"></i>
         <span>Nexus</span>
       </a>
-      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
           <li class="nav-item"><a class="nav-link" href="index.html">Descubrir</a></li>
           <li class="nav-item"><a class="nav-link" href="juegos.html">Juegos</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-          <!-- Pestaña Biblioteca activa -->
           <li class="nav-item"><a class="nav-link active text-primary fw-bold" href="biblioteca.html">Biblioteca</a></li>
           <li class="nav-item"><a class="nav-link" href="cuenta.html">Cuenta</a></li>
         </ul>
-
-        <form class="d-flex me-3 position-relative flex-grow-1 flex-lg-grow-0 my-2 my-lg-0" role="search">
-          <i class="bi bi-search search-icon position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary"></i>
-          <input class="form-control search-input ps-5 bg-secondary bg-opacity-25 text-light border-0" 
-                 type="search" placeholder="Buscar en mi biblioteca..." aria-label="Buscar">
-        </form>
-
-        <div class="d-flex align-items-center gap-2">
-          <a href="#" class="btn btn-outline-light btn-sm d-flex align-items-center gap-2 px-3 py-2">
-            <i class="bi bi-person-fill fs-6"></i>
-            <span>Mi Perfil</span>
-          </a>
+        
+        <!-- Perfil del usuario logueado -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-light text-decoration-none dropdown-toggle gap-2" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- Avatar generado automáticamente con la inicial -->
+              <img src="https://ui-avatars.com/api/?name=B&background=0078f2&color=fff&rounded=true&bold=true" alt="Avatar" width="36" height="36" class="rounded-circle border border-2 border-primary">
+              <span class="fw-semibold">@bryanhd</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+              <li><a class="dropdown-item" href="cuenta.html"><i class="bi bi-person me-2"></i>Mi Perfil</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Ajustes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- SECCIÓN PRINCIPAL: BIBLIOTECA -->
+  <!-- CONTENIDO DE LA BIBLIOTECA -->
   <main class="container-fluid px-4 py-5">
     
-    <!-- Título -->
-    <div class="mb-5 d-flex align-items-center gap-3 border-start border-4 border-primary ps-3">
-      <h1 class="fw-bold mb-0 fs-3">Mi Biblioteca</h1>
-      <span class="badge bg-secondary bg-opacity-50 text-light rounded-pill px-3">6 Juegos</span>
+    <!-- Encabezado de la Biblioteca -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+      <div>
+        <h1 class="display-5 fw-bold mb-1">Mi Biblioteca</h1>
+        <p class="text-secondary mb-0">Tienes <span class="text-light fw-bold">4</span> juegos en tu colección.</p>
+      </div>
+      
+      <!-- Buscador interno de la biblioteca -->
+      <div class="position-relative" style="max-width: 300px; width: 100%;">
+        <i class="bi bi-search search-icon"></i>
+        <input type="search" class="form-control bg-dark border-secondary border-opacity-50 text-light search-input ps-5 py-2" placeholder="Buscar en mi biblioteca...">
+      </div>
     </div>
 
-    <!-- CUADRÍCULA DE BIBLIOTECA -->
+    <!-- Píldoras de Filtro -->
+    <div class="d-flex gap-2 mb-4 overflow-auto pb-2">
+      <button class="btn btn-sm filter-pill active border-0 px-3 py-2 text-secondary fw-semibold">Todos</button>
+      <button class="btn btn-sm filter-pill border-0 px-3 py-2 text-secondary fw-semibold">Instalados (3)</button>
+      <button class="btn btn-sm filter-pill border-0 px-3 py-2 text-secondary fw-semibold">No instalados (1)</button>
+      <button class="btn btn-sm filter-pill border-0 px-3 py-2 text-secondary fw-semibold">Favoritos <i class="bi bi-star-fill text-warning ms-1" style="font-size: 0.75rem;"></i></button>
+    </div>
+
+    <!-- Cuadrícula de Juegos en Biblioteca -->
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
       
-      <!-- Juego 1: FC 27 -->
+      <!-- Juego 1: Cyberpunk 2077 (Jugando) -->
       <div class="col">
-        <div class="library-card">
-          <!-- Aquí se pone la imagen de fondo en el atributo style -->
-          <div class="library-card-bg" style="background-image: url('FC.avif');"></div>
+        <div class="library-card rounded-4 p-3 h-100 d-flex flex-column game-clean-card">
+          <img src="./CyberPunk.avif" class="img-fluid rounded-3 mb-3 object-fit-cover" style="height: 160px;" alt="Cyberpunk 2077">
+          <h5 class="fw-bold text-truncate mb-1">Cyberpunk 2077</h5>
+          <p class="text-secondary small mb-3">Última vez: Hoy</p>
           
-          <div class="library-card-content">
-            <small class="text-uppercase font-monospace text-light opacity-75 mb-1" style="font-size: 0.7rem;">Juego Base</small>
-            <h5 class="fw-bold text-white mb-3 text-truncate">EA SPORTS FC™ 27</h5>
-            <div class="mt-auto">
-              <button class="btn btn-primary btn-library fw-semibold rounded-pill"><i class="bi bi-play-fill me-1"></i> Jugar</button>
+          <div class="mb-4 mt-auto">
+            <div class="d-flex justify-content-between text-secondary small mb-1">
+              <span>Logros: 45/60</span>
+              <span>75%</span>
             </div>
+            <div class="progress progress-custom rounded-pill">
+              <div class="progress-bar bg-primary rounded-pill" style="width: 75%"></div>
+            </div>
+            <div class="text-secondary small mt-2"><i class="bi bi-clock-history me-1"></i> 124 horas jugadas</div>
           </div>
+          
+          <button class="btn btn-play w-100 fw-bold py-2"><i class="bi bi-play-fill fs-5 align-middle me-1"></i> JUGAR</button>
         </div>
       </div>
 
-      <!-- Juego 2: GTA VI -->
+      <!-- Juego 2: God of War Ragnarok (Instalado) -->
       <div class="col">
-        <div class="library-card">
-          <div class="library-card-bg" style="background-image: url('GrandTheftAuto6Banner.jpg');"></div>
-          <div class="library-card-content">
-            <small class="text-uppercase font-monospace text-light opacity-75 mb-1" style="font-size: 0.7rem;">Juego Base</small>
-            <h5 class="fw-bold text-white mb-3 text-truncate">Grand Theft Auto VI</h5>
-            <div class="mt-auto">
-              <button class="btn btn-outline-light btn-library fw-semibold rounded-pill"><i class="bi bi-download me-1"></i> Instalar</button>
+        <div class="library-card rounded-4 p-3 h-100 d-flex flex-column game-clean-card">
+          <img src="./Portada_God_of_War_Ragnarok.webp" class="img-fluid rounded-3 mb-3 object-fit-cover" style="height: 160px;" alt="God of War Ragnarök">
+          <h5 class="fw-bold text-truncate mb-1">God of War Ragnarök</h5>
+          <p class="text-secondary small mb-3">Última vez: Ayer</p>
+          
+          <div class="mb-4 mt-auto">
+            <div class="d-flex justify-content-between text-secondary small mb-1">
+              <span>Logros: 12/72</span>
+              <span>16%</span>
             </div>
+            <div class="progress progress-custom rounded-pill">
+              <div class="progress-bar bg-primary rounded-pill" style="width: 16%"></div>
+            </div>
+            <div class="text-secondary small mt-2"><i class="bi bi-clock-history me-1"></i> 15 horas jugadas</div>
           </div>
+          
+          <button class="btn btn-play w-100 fw-bold py-2"><i class="bi bi-play-fill fs-5 align-middle me-1"></i> JUGAR</button>
         </div>
       </div>
 
-      <!-- Juego 3: Fortnite -->
+      <!-- Juego 3: Valorant (Instalado / Favorito) -->
       <div class="col">
-        <div class="library-card">
-          <div class="library-card-bg" style="background-image: url('unnamed.png');"></div>
-          <div class="library-card-content">
-            <small class="text-uppercase font-monospace text-light opacity-75 mb-1" style="font-size: 0.7rem;">Free to Play</small>
-            <h5 class="fw-bold text-white mb-3 text-truncate">Fortnite</h5>
-            <div class="mt-auto">
-              <button class="btn btn-primary btn-library fw-semibold rounded-pill"><i class="bi bi-play-fill me-1"></i> Jugar</button>
-            </div>
+        <div class="library-card rounded-4 p-3 h-100 d-flex flex-column game-clean-card position-relative">
+          <div class="position-absolute top-0 end-0 p-3 z-2">
+            <i class="bi bi-star-fill text-warning fs-5"></i>
           </div>
+          <img src="./Valorant.63d6cd19-3636-44d1-88d9-a23c734833f8" class="img-fluid rounded-3 mb-3 object-fit-cover" style="height: 160px;" alt="Valorant">
+          <h5 class="fw-bold text-truncate mb-1">Valorant</h5>
+          <p class="text-secondary small mb-3">Última vez: Hace 3 días</p>
+          
+          <div class="mb-4 mt-auto">
+            <div class="d-flex justify-content-between text-secondary small mb-1">
+              <span>Rango Competitivo</span>
+              <span class="text-info fw-bold">Platino 2</span>
+            </div>
+            <div class="text-secondary small mt-2"><i class="bi bi-clock-history me-1"></i> 340 horas jugadas</div>
+          </div>
+          
+          <button class="btn btn-play w-100 fw-bold py-2"><i class="bi bi-play-fill fs-5 align-middle me-1"></i> JUGAR</button>
         </div>
       </div>
 
-      <!-- Juego 4: eFootball -->
+      <!-- Juego 4: God of War 2018 (No Instalado) -->
       <div class="col">
-        <div class="library-card">
-          <div class="library-card-bg" style="background-image: url('./main_page_1_sp.png');"></div>
-          <div class="library-card-content">
-            <small class="text-uppercase font-monospace text-light opacity-75 mb-1" style="font-size: 0.7rem;">Free to Play</small>
-            <h5 class="fw-bold text-white mb-3 text-truncate">eFootball™</h5>
-            <div class="mt-auto">
-              <button class="btn btn-primary btn-library fw-semibold rounded-pill"><i class="bi bi-play-fill me-1"></i> Jugar</button>
+        <div class="library-card rounded-4 p-3 h-100 d-flex flex-column game-clean-card">
+          <!-- Hacemos que la imagen se vea un poco transparente para dar efecto de "no instalado" -->
+          <img src="./God.avif" class="img-fluid rounded-3 mb-3 object-fit-cover opacity-50" style="height: 160px;" alt="God of War">
+          <h5 class="fw-bold text-truncate mb-1 text-secondary">God of War</h5>
+          <p class="text-secondary small mb-3">Última vez: 14 Mayo 2025</p>
+          
+          <div class="mb-4 mt-auto">
+            <div class="d-flex justify-content-between text-secondary small mb-1">
+              <span>Logros: 37/37</span>
+              <span class="text-success"><i class="bi bi-trophy-fill"></i> 100%</span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Juego 5: Roblox -->
-      <div class="col">
-        <div class="library-card">
-          <div class="library-card-bg" style="background-image: url('./036eacfa29f06e8e637c6239387c13ff7454120e915404a4.avif');"></div>
-          <div class="library-card-content">
-            <small class="text-uppercase font-monospace text-light opacity-75 mb-1" style="font-size: 0.7rem;">Free to Play</small>
-            <h5 class="fw-bold text-white mb-3 text-truncate">Roblox</h5>
-            <div class="mt-auto">
-              <button class="btn btn-outline-light btn-library fw-semibold rounded-pill"><i class="bi bi-download me-1"></i> Instalar</button>
+            <div class="progress progress-custom rounded-pill">
+              <div class="progress-bar bg-success rounded-pill" style="width: 100%"></div>
             </div>
+            <div class="text-secondary small mt-2"><i class="bi bi-clock-history me-1"></i> 62 horas jugadas</div>
           </div>
-        </div>
-      </div>
-
-      <!-- Juego 6: Minecraft -->
-      <div class="col">
-        <div class="library-card">
-          <div class="library-card-bg" style="background-image: url('./Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg');"></div>
-          <div class="library-card-content">
-            <small class="text-uppercase font-monospace text-light opacity-75 mb-1" style="font-size: 0.7rem;">Juego Base</small>
-            <h5 class="fw-bold text-white mb-3 text-truncate">Minecraft</h5>
-            <div class="mt-auto">
-              <button class="btn btn-primary btn-library fw-semibold rounded-pill"><i class="bi bi-play-fill me-1"></i> Jugar</button>
-            </div>
-          </div>
+          
+          <!-- Botón de instalar en lugar de jugar -->
+          <button class="btn btn-outline-light w-100 fw-bold py-2"><i class="bi bi-download fs-5 align-middle me-1"></i> INSTALAR (70 GB)</button>
         </div>
       </div>
 
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-black text-secondary py-4 mt-5 border-top border-dark">
-    <div class="container text-center text-md-start">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-        <p class="m-0 fs-7">© 2026 GameZone Store. Todos los derechos reservados.</p>
-        <div class="d-flex gap-3">
-          <a href="#" class="text-secondary text-decoration-none hover-white"><i class="bi bi-twitter-x fs-5"></i></a>
-          <a href="#" class="text-secondary text-decoration-none hover-white"><i class="bi bi-discord fs-5"></i></a>
-          <a href="#" class="text-secondary text-decoration-none hover-white"><i class="bi bi-youtube fs-5"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>
